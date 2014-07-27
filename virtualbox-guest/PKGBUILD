@@ -1,0 +1,17 @@
+developer=http://indiebox.net/
+maintainer=http://indiebox.net/
+pkgname=$(basename $(pwd))
+pkgver=0.1
+pkgrel=1
+pkgdesc="Configure VirtualBox guest modules for a virtual Indie Boxe"
+arch=( 'any' )
+url="http://ubos.indiebox.net/"
+license=('GPL')
+depends=('virtualbox-guest-modules' 'virtualbox-guest-utils')
+source=()
+backup=()
+
+package() {
+    mkdir -p -m755 $pkgdir/etc/modules-load.d
+    install -m 644 $startdir/virtualbox.conf $pkgdir/etc/modules-load.d/
+}
