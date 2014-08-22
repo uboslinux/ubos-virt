@@ -1,15 +1,16 @@
-developer=http://indiebox.net/
-maintainer=http://indiebox.net/
+developer="http://indiecomputing.com/"
+url="http://ubos.net/"
+maintainer=$developer
 pkgname=$(basename $(pwd))
 pkgver=0.1
-pkgrel=1
-pkgdesc="Configure VirtualBox guest modules for a virtual Indie Boxe"
+pkgrel=2
+pkgdesc="Configure guest modules for UBOS under VirtualBox"
 arch=( 'any' )
-url="http://ubos.indiebox.net/"
 license=('GPL')
-depends=('virtualbox-guest-modules' 'virtualbox-guest-utils')
-source=()
-backup=()
+depends=(
+        'virtualbox-guest-modules'
+        'virtualbox-guest-utils'
+)
 
 package() {
     mkdir -p -m755 $pkgdir/etc/modules-load.d
