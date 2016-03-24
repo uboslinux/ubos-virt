@@ -3,12 +3,12 @@ url="http://ubos.net/"
 maintainer=$developer
 pkgname=$(basename $(pwd))
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Configure guest modules for UBOS under VirtualBox"
 arch=( 'any' )
 license=('GPL')
 depends=(
-        'virtualbox-guest-modules'
+        'virtualbox-guest-dkms'
         'virtualbox-guest-utils'
 )
 
